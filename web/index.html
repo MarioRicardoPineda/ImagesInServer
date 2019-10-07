@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        
+        <!--EN EL FORMULARIO ATRAVES DEL METODO POST ENVIO LOS DATOS, Y POR MEDIO DE FORM-DATA PARA LAS IMAGENES--> 
+        <form action="imagenes" method="POST"
+              enctype="multipart/form-data" id="form">
+            
+            <!--ESTE ES EL IMPUT EL CUAL SOPORTA AGREGAR MULTIPLES IMAGENES-->
+            <input type="file" name="archivos"
+                   multiple id="archivo" accept="images/*">
+            
+            <!--ESTE LABEL ES EL QUE ESTARA VISIBLE COMO SI FUESE EL BOTON-->
+            <label for="archivo" class="labelFile" id="labelFile">Agregar Imagenes</label>
+            
+            <!--ESTOS BOTONES ESTARAN OCULTOS HASTA QUE SE HAYAN SELECCIONADO LAS IMAGENES-->
+            <button type="submit" class="labelFile" id="redirect"
+               style="display: none; border: none;">
+                Guardar Imagenes
+            </button>
+            
+            
+            <a href="imagenes.html" id="ver-imagenes" 
+               class="labelFile" style="text-decoration: none;">
+                   Ver Las Imagenes
+            </a>
+        </form>
+        
+        <!--CONTENEDOR DONDE MOSTRARE LA VISTA PREVIA-->
+        <div class="contenedor" id="content">
+            
+        </div>
+        
+        <script src="filePreview.js"></script>
+    </body>
+</html>
